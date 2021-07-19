@@ -1,0 +1,15 @@
+
+<html>
+    <body>
+    <div style="text-align: center;"><h1 style="font-size:40px"> Order/Billing </h1></div>
+    <form action="{% url 'accounts:billing' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            {{ form }}
+        <div><button type="submit">Save</button></div>
+    </form>
+    {% if img_obj %}
+  <h3>Succesfully uploaded :</h3>
+  <img src="{{ img_obj.upload_bill.url}}" alt="connect" style="max-height:300px">
+{% endif %}
+    </body>
+</html>

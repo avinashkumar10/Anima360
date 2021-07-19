@@ -1,0 +1,11 @@
+
+<html>
+    <body>
+    <div style="text-align: center;"><h1 style="font-size:40px"> Shelter Facilities </h1></div>
+    <form action="{% url 'accounts:facilities' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            {{ form }}
+        <div><button type="submit">Save</button></div>
+    </form>
+    </body>
+</html>
